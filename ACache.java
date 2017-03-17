@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Copyright (c) 2012-2013, Michael Yang 杨福海 (www.yangfuhai.com).
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.julanling.modules.dagongloan.util.Cache;
+
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -24,7 +24,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 
-import com.julanling.dgq.httpclient.JsonUtil;
+
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -103,14 +103,6 @@ public class ACache {
 			throw new RuntimeException("can't make dirs in " + cacheDir.getAbsolutePath());
 		}
 		mCache = new ACacheManager(cacheDir, max_size, max_count);
-	}
-
-
-	//从json中取值
-	public <T> List<T> getListData(String key, Class<T> cls, List<T> list) {
-		JSONObject object =  getAsJSONObject(key);
-		list = JsonUtil.getResultListData(object,cls, list);
-		return list;
 	}
 
 	public static final String STRING = "String";
